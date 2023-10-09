@@ -1,0 +1,407 @@
+.them-moi-san-pham {
+    width: 70%;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 10px #ccc;
+    border-radius: 5px;
+    background: #f2f2f2;
+}
+
+#edit__san-pham {
+    display: none;
+}
+
+.them-moi-san-pham button.button__edit {
+    background: rgb(19, 226, 19);
+    border-color: rgb(19, 226, 19);
+}
+
+.them-moi-san-pham button.button__edit:hover {
+    border-color: rgb(19, 226, 19);
+    background: var(--white-color);
+    color: rgb(19, 226, 19);
+}
+
+.them-moi-san-pham label,input {
+    width: 100%;
+    font-size: 15px;
+}
+
+.them-moi-san-pham label {
+    margin-top: 20px;
+    display: block;
+}
+.them-moi-san-pham .error {
+    margin-top: 5px;
+}
+
+
+.them-moi-san-pham input {
+    margin-top: 5px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline-color: #ddd;
+}
+
+.them-moi-san-pham button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: var(--hover-color);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+}
+
+.them-moi-san-pham button:hover {
+    background: white;
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+    cursor: pointer;
+}
+
+
+
+.hien-thi-san-pham-them-moi-list {
+    width: 100%;
+    box-shadow: 2px 2px 10px #ccc;
+    background: rgb(253, 252, 252);
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.hien-thi-san-pham-them-moi-item-heading {
+    padding: 15px 10px 15px 2px;
+
+}
+
+.hien-thi-san-pham-them-moi-item-heading .hien-thi-san-pham-them-moi-item-heading-text {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.hien-thi-san-pham-them-moi-item-heading,
+.hien-thi-san-pham-them-moi-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.hien-thi-san-pham-them-moi-item {
+    padding: 10px 3px 10px 0;
+    border-top: 1px solid rgb(230, 228, 228);
+}
+
+.add-product__trademark,
+.add-product__price,
+.add-product__quantyti {
+    font-size: 1.8rem;
+    
+}
+
+.add-product__quantyti {
+    flex: 0.5;
+}
+
+.add-product__image {
+    flex: 1;
+}
+
+.add-product__img {
+    width: 50%;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.add-product__img:hover {
+    border-color: var(--hover-color);
+}
+
+.add-product__name {
+    flex: 3;
+}
+
+.add-product__name-link {
+    font-size:2rem;
+    line-height:2.5rem;
+    color: var(--text-color);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    cursor: default;
+}
+
+.add-product__price {
+    flex: 1;
+}
+
+.add-product__trademark {
+    flex: 1;
+    color: var(--hover-color);
+}
+
+.add-product__button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-product__btn {
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    border: 2px solid;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.add-product__btn-green {
+    background: rgb(19, 226, 19);
+    border-color: rgb(19, 226, 19);
+    margin-right: 5px;
+}
+
+.add-product__btn-green:hover {
+    background: var(--white-color);
+    color: rgb(19, 226, 19);
+}
+
+.add-product__btn-red {
+    background: rgb(255, 66, 66);
+    border-color: rgb(255, 66, 66);
+}
+
+.add-product__btn-red:hover {
+    color: rgb(255, 66, 66);
+    background: var(--white-color);
+}
+
+/* quản lí user */
+.admin___quan-li-user {
+    width: 100%;
+    box-shadow: 2px 2px 10px #ccc;
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.admin___quan-li-user-heading {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+    padding: 10px 0 15px 0;
+    border-bottom: 1px solid #ddd;
+    color: var(--hover-color);
+}
+
+/* rgb(230, 228, 228) */
+
+.admin___quan-li-user-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px 3px 10px 0;
+    border-top: 1px solid rgb(230, 228, 228);
+}
+
+.admin___quan-li-user-item {
+    flex: 1;
+    font-size: 1.6rem;   
+}
+
+.add-product__btn-body {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.admin___quan-li-user-item:last-child {
+    flex: 1
+}
+
+.admin___quan-li-user-item:nth-child(2) {
+    flex: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.admin___quan-li-user-list.admin___quan-li-user-list-head {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.add-product__btn.add-product__btn-blue {
+    background: rgb(85, 85, 252);
+    border: 2px solid rgb(85, 85, 252);
+}
+
+.add-product__btn.add-product__btn-blue:hover {
+    background: var(--white-color);
+    color: blue;
+}
+
+.thongKe__tinhHinhKinhDoanh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 2px 2px 10px #ccc;
+    background: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    padding: 20px ;
+}
+
+.thongKe__tinhHinhKinhDoanh-left {
+    display: flex;
+    align-items: center;
+}
+
+.thongKe__tinhHinhKinhDoanh-text {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.thongKe__tinhHinhKinhDoanh-shop {
+    font-size: 2.2rem;
+    margin-left: 5px;
+    line-height: 2.2rem;
+    color: var(--hover-color);
+}
+
+button.thongKe__tinhHinhKinhDoanh-btn {
+    font-size: 1.8rem;
+    padding: 6px 10px;
+    line-height: 1.8rem;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 2px solid var(--hover-color);
+    color: var(--white-color);
+    background: var(--hover-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.thongKe__tinhHinhKinhDoanh-btn:hover {
+    background: var(--white-color);
+    color: var(--hover-color);
+}
+
+#thongKe__tinhHinhKinhDoanh {
+    display: none;
+}
+
+#admin__quan-li-user {
+    display: none;
+}
+
+.admin__content {
+    width: 100%;
+    /* background: palegoldenrod; */
+}
+
+.admin__content-left {
+    width: 15%;
+    float: left;
+}
+
+.admin__content ul {
+    list-style: none;
+}
+
+.admin__content ul li.admin__content-left-item {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.admin__content ul li.admin__content-left-item:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.admin__content-right {
+    width: 85%;
+    min-height: 790px;
+    float: right;
+    border-left: 1px solid #ccc;
+
+}
+
+.showProductsadmin {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: rgb(0, 238, 255);
+    border: 2px solid rgb(0, 238, 255);
+    color: var(--white-color);
+    width: 20%;
+    justify-content: center;
+    padding: 4px 6px;
+}
+
+.BackProductsadmin {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: rgb(0, 238, 255);
+    border: 2px solid rgb(0, 238, 255);
+    color: var(--white-color);
+    width: 7%;
+    justify-content: center;
+    padding: 4px 6px;
+}
+
+#showProductsadmin {
+
+}
+
+#HideProductsadmin {
+    display: none;
+}
+
+.BackProductsadmin:hover,
+.showProductsadmin:hover {
+    background: var(--white-color);
+    color: var(--text-color);
+}
+
+.showProductsadmin-icon-back,
+.showProductsadmin-icon,
+.showProductsadmin-text {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+.showProductsadmin-icon {
+    margin-left: 6px;
+}
+
+.showProductsadmin-icon-back {
+    margin-right: 6px;
+}

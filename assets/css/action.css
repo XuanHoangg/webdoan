@@ -1,0 +1,7 @@
+.header__top-item:first-child::after {
+    content: "";
+    border-right: 1px solid #ccc;
+    height: 1.6rem;
+    position: relative;
+    right: -5px;
+}

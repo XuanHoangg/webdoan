@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AD min</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/ad_min.css">
+    <link rel="stylesheet" href="./assets/css/them-moi-san-pham1.css">
+    <link rel="stylesheet" href="./assets/css/login-signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/hotro.js"></script>
+    <script src="assets/js/formValidate.js"></script>
+    <script src="assets/js/xu_li_san_pham_trong_add.js"></script>
+    <script src="assets/js/xu_li_quan_ly_user.js"></script>
+    <script src="./assets/js/xem_don_hang.js"></script>
+</head>
+<body>
+    <div class="admin__content">
+        <div class="admin__content-left">
+            <ul>
+                <li class="admin__content-left-item" onclick="onclickThemSuaXoa()">Thêm Sửa Xóa</li>
+                <li class="admin__content-left-item" onclick="onclickQuanLyXemDon()">QLy User && Xem đơn</li>
+                <li class="admin__content-left-item" onclick="onclickXemThongKe()">Xem thống kê</li>
+            </ul>
+        </div>
+        <div class="admin__content-right">
+            <div class="them-moi-san-pham" id="them-moi-san-pham">
+                <label for="hinhAnh">Hình ảnh sản phẩm</label>
+                <input khongDeTrong noiDungLoiDeTrong = 'Hình ảnh không được để trống' type="text" id="hinhAnh">
+                <label for="hinhAnh" class="error" id="error1"></label>
+        
+                <label for="ten">Tên sản phẩm</label>
+                <input khongDeTrong noiDungLoiDeTrong = 'Tên không được để trống' type="text" id="ten">
+                <label for="ten" class="error" id="error2"></label>
+        
+                <label for="giaGoc">Giá gốc</label>
+                <input khongDeTrong noiDungLoiDeTrong = 'Giá góc không được để trống' type="number" id="giaGoc">
+                <label for="giaGoc" class="error" id="error3"></label>
+        
+                <label for="phanTramGiamGia">Giảm giá ( % )</label>
+                <input khongDeTrong noiDungLoiDeTrong = 'Phần trăm giảm giá không được để trống' type="number" id="phanTramGiamGia">
+                <label for="phanTramGiamGia" class="error" id="error4"></label>
+        
+                <label for="thuongHieu" >Thương hiệu</label>
+                <input khongDeTrong noiDungLoiDeTrong = 'Thương hiệu không được để trống' type="text" id="thuongHieu">
+                <label for="thuongHieu" class="error" id="error5"></label>
+        
+                <input type="hidden" id="idSanPham">
+                
+        
+                <button id="add__san-pham" onclick="onclickTaoSanPham()">Thêm sản phẩm</button>
+                <button id="edit__san-pham" class="button__edit" onclick="runEditSanPham()">Cập nhật</button>
+            </div>
+
+            <div class="showProductsadmin" id="showProductsadmin" onclick="onlickShowProductsAdmin()">
+                <span class="showProductsadmin-text">Hiển thị sản phẩm</span>
+                <i class="showProductsadmin-icon fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="showProductsadmin" id="HideProductsadmin" onclick="onlickHideProductsAdmin()">
+                <span class="showProductsadmin-text">Thu gọn</span>
+                <i class="showProductsadmin-icon fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="hien-thi-san-pham-them-moi-list" id="hien-thi-san-pham-them-moi-list">      
+                    <!-- hiển thị ds sản phẩm-->
+            </div>
+            <div class="admin___quan-li-user" id="admin__quan-li-user">
+                    <!-- hiển thị ds người mua hàng-->
+            </div>
+            <div class="thongKe__tinhHinhKinhDoanh" id="thongKe__tinhHinhKinhDoanh">
+                <div class="thongKe__tinhHinhKinhDoanh-left">
+                    <div class="thongKe__tinhHinhKinhDoanh-text">Thống kê tình hình kinh doanh</div>
+                    <div class="thongKe__tinhHinhKinhDoanh-shop">Beauty Shop</div>
+                </div>
+                <button class="thongKe__tinhHinhKinhDoanh-btn" onclick="onclickXemThongKeKinhDoanh()">Xem thống kê</button>
+    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        hinhHienThiSanPhamDeQuanLy();
+        hienThiQuanLyUser();
+
+        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+            if(danhSachSanPham == null)
+        {
+            danhSachSanPham = new Array();
+        }
+        console.log(danhSachSanPham);
+
+        // hàm xóa sản phẩm
+        function onClickXoaSanPhamAdmin(idSanPham) {
+
+            for(var i = 0;i < danhSachSanPham.length;i++)
+            {
+                if(danhSachSanPham[i].id == idSanPham)
+                {
+                    var confirm = window.confirm("Bạn chắc chắn muốn xóa SẢN PHẨM không?");
+                    if(confirm)
+                    {
+                        danhSachSanPham.splice(i,1);
+                    }
+                }
+            }
+            
+            // lưu danh sách sản phẩm xuống local storage
+
+            var jsonDanhSachSanPham = JSON.stringify(danhSachSanPham);
+            // bước 2: lưu vào localstorage
+            localStorage.setItem('danhSachSanPham', jsonDanhSachSanPham);
+
+            // lấy danh sach sản phẩm lên 
+            var danhSachSanPhamNew = JSON.parse(localStorage.getItem('danhSachSanPham'));
+            if(danhSachSanPhamNew == null)
+            {
+                danhSachSanPhamNew = new Array();
+            }
+
+            // chuyển danh sách item thành HTML
+            var HTMLDanhSachSanPham = chuyenSanPhamDaTaoOnAdminThanhHTML(danhSachSanPhamNew);
+
+            // truy cập node để hiển thị HTMLDanhSachSanPham
+            var nodeHienThiSanPham = document.getElementById('hien-thi-san-pham-them-moi-list');
+            nodeHienThiSanPham.innerHTML = HTMLDanhSachSanPham;
+        } 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+.gio-hang__container {
+    margin: 25px 0 35px 0;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(236, 236, 236);
+    background: #fffafa;
+    box-shadow: 5px 5px 10px rgb(236, 236, 236);
+}
+
+.gio-hang__container-heading {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--hover-color);
+}
+
+.gio-hang__container-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.gio-hang__container-item-none {
+    width: 60px;
+}
+
+.gio-hang__container-item:nth-child(2) {
+    flex: 3;
+}
+
+.gio-hang__container-item:nth-child(3) {
+    flex: 2;
+    margin-left: 10px;
+}
+
+.gio-hang__container-item:nth-child(4),
+.gio-hang__container-item:nth-child(5),
+.gio-hang__container-item:nth-child(6) {
+    flex: 1;
+}
+
+.gio-hang__container-item:nth-child(1) {
+    width: 60px;
+}
+
+.gio-hang__container-item {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+}
+
+
+.gio-hang {
+    
+}
+.item__gio-hang {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.item__gio-hang {
+    border: 1px solid rgb(238, 236, 236);
+    padding: 3px;
+    border-radius: var(--border-radius);
+}
+
+.item__gio-hang-image {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f2f2f2;
+    border-radius: var(--border-radius);
+}
+
+.item__gio-hang-image:hover {
+    border-color: var(--hover-color);
+}
+
+.item__gio-hang-img {
+    width: 100%;
+    height: 100%;
+}
+
+.item__gio-hang-name {
+    flex: 3;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    text-align: center;
+    padding: 0 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.item__gio-hang-name:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+.item__gio-hang-price {
+    flex: 2;
+    text-align: center;
+}
+
+.item__gio-hang-total,
+.item__gio-hang-act,
+.item__gio-hang-quantyti {
+    flex: 1;
+}
+
+.item__gio-hang-gia-goc {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: rgb(190, 189, 189);
+    text-decoration: line-through;
+}
+
+.item__gio-hang-gia-ban {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: var(--hover-color);
+    font-weight: 300;
+    margin-right: 5px;
+}
+
+.item__gio-hang-quantyti {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 50%;
+    height: 25px;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+    outline-color: #ccc;
+    color: #5e5e5e;
+}
+
+.item__gio-hang-total {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: var(--black-color);
+    font-weight: 400;
+    text-align: center;
+}
+
+.item__gio-hang-act {
+    text-align: center;
+}
+
+.item__gio-hang-act-icon {
+    font-size: 1.6rem;
+    padding: 10px;
+}
+
+.item__gio-hang-act-icon:hover {
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+
+/* mua hàng */
+.build-product {
+    margin: 25px 0 35px 0;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(236, 236, 236);
+    background: #fffafa;
+    box-shadow: 5px 5px 10px rgb(236, 236, 236);
+}
+
+.build-product__heading {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--hover-color);
+    margin-bottom: 15px;
+}
+
+.build-product__text {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.build-product__input {
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    margin: 5px 0 15px 0;
+    text-indent: 10px;
+    font-size: 1.5rem;
+    border: 1px solid #e2dfdf;
+    border-radius: 5px;
+    outline-color: #ccc;
+}
+
+.build-product__btn {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--white-color);
+    background: var(--hover-color);
+    border: 1px solid var(--hover-color);
+}
+
+.build-product__btn:hover {
+    background: var(--white-color);
+    color: var(--hover-color);
+}
+
+.giohang__no-san-pham-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.giohang__no-san-pham-text {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+#giohang__no-san-pham {
+    margin-bottom: 50px;
+}

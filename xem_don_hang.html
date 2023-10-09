@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đơn hàng</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/ad_min.css">
+    <link rel="stylesheet" href="./assets/css/them-moi-san-pham1.css">
+    <link rel="stylesheet" href="./assets/css/login-signup.css">
+    <link rel="stylesheet" href="./assets/css/gio_hang.css">
+    <link rel="stylesheet" href="./assets/css/xem_don_hang.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/hotro.js"></script>
+    <script src="assets/js/formValidate.js"></script>
+    <script src="assets/js/xu_li_san_pham_trong_add.js"></script>
+    <script src="assets/js/xu_li_quan_ly_user.js"></script>
+    <script src="./assets/js/xem_don_hang.js"></script>
+
+</head>
+<body>
+
+    <div class="app__header">
+        <header class="header__ADMIN">
+            <div class="grid header__admin">
+                <div class="header__admin-body">
+                    <div class="header__admin-body-image">
+                        <img src="./assets/img/admin/logo_admin.jpg" alt="" class="header__admin-body-img">
+                    </div>
+                    <div class="header__admin-body-name">
+                        <span class="header__admin-body-text-hover">chào mừng</span>
+                        <span class="header__admin-body-text">bạn đến với trang chủ admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="BackProductsadmin" id="showProductsadmin" onclick="onclickBackAdmin()">
+        <i class="showProductsadmin-icon-back fa-solid fa-arrow-left"></i>
+        <span class="showProductsadmin-text">Back</span>
+    </div>
+    <div class="grid">
+        <div class="admin__don-hang" id="admin__don-hang">     
+                <!-- thông tin khách hàng-->
+                <!-- hiển thị đơn hàng -->
+                <!-- footer xác nhân  && price-->                
+        </div>
+        <!-- chưa có đơn hàng -->
+        <div id="admin__no-don-hang">
+            <img src="./assets/img/giohangtrong1.png" alt="" class="admin__no-don-hang-img">
+            <h4 class="admin__no-don-hang-text">Chưa có đơn hàng nào</h4>
+        </div>
+    </div>
+
+    <script>
+        hienThiQuanLyDonHang();
+    </script>
+</body>
+</html>

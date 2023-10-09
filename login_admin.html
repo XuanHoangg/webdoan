@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AD min</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/ad_min.css">
+    <link rel="stylesheet" href="./assets/css/them-moi-san-pham1.css">
+    <link rel="stylesheet" href="./assets/css/login-signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/formValidate.js"></script>
+</head>
+<body>
+
+    <div class="app__header">
+        <header class="header__ADMIN">
+            <div class="grid header__admin">
+                <div class="header__admin-body">
+                    <div class="header__admin-body-image">
+                        <img src="./assets/img/admin/logo_admin.jpg" alt="" class="header__admin-body-img">
+                    </div>
+                    <div class="header__admin-body-name">
+                        <span class="header__admin-body-text-hover">chào mừng</span>
+                        <span class="header__admin-body-text">bạn đến với trang chủ admin</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="grid">
+        <div style="width: 50% ; height: 50%; margin: 0 auto;">
+            <div class="login__container-right">
+                <div class="login__container-right-body">
+                    <div class="login__container-right-body-body">
+                        <ul class="login__list1">
+                            <li class="login__item1">
+                                <input khongDeTrong noiDungLoiDeTrong = 'Email không được để trống' id="email" type="text" class="login__item1-input" placeholder="Email">
+                                <label for="email" class="error error__login"></label>
+                            </li>
+                            <li class="login__item1">
+                                <input khongDeTrong noiDungLoiDeTrong = 'Mật khẩu không được để trống' id="matKhau" type="password" class="login__item1-input" placeholder="Mật khẩu">
+                                <label for="matKhau" class="error error__login"></label>
+                            </li>
+                            <li class="login__item1">
+                                <button class="login__item1-btn" onclick="onClickFormValidateLoginAdmin()">Đăng nhập Admin</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app__footer" id="contact">
+        <div class="grid footer__container">
+            <div class="footer__container-item">
+                <h2 class="footer__container-name footer__container-name-hover">thông tin liên hệ</h2>
+                <ul class="footer__list1">
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon footer__item1-icon-map fa-solid fa-location-dot"></i>
+                        <span class="footer__item1-text">273 An Dương Vương, P.3, Q.5, HCM</span>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-solid fa-phone"></i>
+                        <span class="footer__item1-text">Hotline: 0772513747</span>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-solid fa-phone"></i>
+                        <span class="footer__item1-text">Zalo: 0772513747</span>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-solid fa-envelope"></i>
+                        <span class="footer__item1-text">support@nhom11.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container-item">
+                <h2 class="footer__container-name">dịch vụ khách hàng</h2>
+                <ul class="footer__list2">
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Giới thiệu về chúng tôi</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Chương trình khuyến mãi</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Câu hỏi thường gặp FAQ</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Tìm đường đến cửa hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container-item">
+                <h2 class="footer__container-name">chính sách - quy định</h2>
+                <ul class="footer__list2">
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Cách thức thanh toán</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Quy định bảo hành</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Quy định đổi - trả hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container-item">
+                <h2 class="footer__container-name">kết nối với chúng tôi</h2>
+                <ul class="footer__list1">
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/duythuan28102002" class="footer__item1-link">Facebook</a>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon footer__item1-icon-ins fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/ndt2810/" class="footer__item1-link">Instagram</a>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-regular fa-hand-point-right"></i>
+                        <span class="footer__item-page">Page home</span>
+                        <a href="./index_test.html" class="footer__item-page-link">Click Here</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__banquyen">                
+            <span class="footer__banquyen-text">Copyright 2018 © by DUYTHUAN | Your Skincare Friend. All rights reserved.</span>
+        </div>
+    </div>
+
+    <script>
+    var taiKhoanAdmin = new Array();
+    taiKhoanAdmin = [{"email":"nhom11@gmail.com","matKhau":"nhom11"}];
+    /* lữu trữ xuống local storage */
+    var jsontaiKhoanAdmin = JSON.stringify(taiKhoanAdmin);
+    localStorage.setItem('taiKhoanAdmin', jsontaiKhoanAdmin);
+
+
+
+    var taiKhoanAdmin = JSON.parse(localStorage.getItem('taiKhoanAdmin'));
+
+    function onClickFormValidateLoginAdmin() {
+        if(kiemTraHopLeFormTaoSanPham() == true)
+        {
+            var email = document.getElementById('email').value;
+            var matKhau = document.getElementById('matKhau').value;
+            var kiemTraDangNhap = false;
+            for(var i = 0;i < taiKhoanAdmin.length;i++)
+            {
+                if(email == taiKhoanAdmin[i].email && matKhau == taiKhoanAdmin[i].matKhau)
+                { 
+                    kiemTraDangNhap = true; 
+                    window.location.href = "./add_sản_phẩm.html";
+                    alert('đăng nhập Page Admin thành công');
+                }
+            }    
+            if(kiemTraDangNhap == false)
+            {    
+                    alert('Email hoặc mật khẩu không đúng!');
+            }     
+        } 
+    }
+    </script>
+</body>
+</html>

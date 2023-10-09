@@ -1,0 +1,141 @@
+.xemThongKe__container {
+    width: 100%;
+    box-shadow: 2px 2px 10px #ccc;
+    background: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    margin: 50px 0 100px 0;
+    padding: 15px;
+}
+
+.xemThongKe__container-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+}
+
+.xemThongKe__container-item {
+    margin-right: 5px;
+}
+
+.xemThongKe__container-item-btn {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(139, 138, 138);
+    background: rgb(161, 161, 161);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.xemThongKe__container-item-btn:hover {
+    background: var(--white-color);
+    color: var(--black-color);
+
+    border-color: #ccc;
+}
+
+.xemThongKe__container-heading {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: var(--hover-color);
+    text-align: center;
+}
+
+.xemThongKe__container-text {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#xemThongKe__body__TungLoai {
+    /* display: none; */
+}
+
+.xemThongKe__body__TungLoai {
+    padding: 20px 10px 20px;
+    border: 2px solid #ccc;
+}
+
+.xemThongKe__body-text {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    display: flex;
+
+}
+
+.xemThongKe__body-text-hover {
+    color: var(--hover-color);
+    margin-left: 5px;
+}
+
+.xemThongKe__body-list-heading {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.xemThongKe__body-item-heading {
+    flex: 1;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.xemThongKe__body-item-heading:nth-child(2) {
+    flex: 2;
+}
+
+.xemThongKe__body-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding: 10px 0 6px 0;
+    border: 1px solid #ddd;
+}
+
+.xemThongKe__body-item {
+    flex: 1;
+}
+
+.xemThongKe__body-item:nth-child(2) {
+    flex: 2;
+}
+
+.xemThongKe__body-item-img {
+    width: 70px;
+    height: 70px;
+    
+}
+
+.xemThongKe__body-item-img:hover {
+    border-color: var(--hover-color);
+}
+
+.xemThongKe__body-item-name {
+    font-size: 1.6rem;
+}
+
+.xemThongKe__body-item-name-hover {
+    font-size: 1.6rem;
+    color: var(--hover-color);
+}
+
+#xemThongKe__body__TatCaSanPham {
+    display: none;
+}
+
+
+
+
+
+
+
+
+

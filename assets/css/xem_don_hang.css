@@ -1,0 +1,222 @@
+.admin__don-hang {
+    width: 100%;
+    box-shadow: 2px 2px 10px #ccc;
+    background: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    margin: 50px 0 100px 0;
+    padding: 15px;
+}
+
+.admin__don-hang-header-heading {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--hover-color);
+
+}
+
+.admin__don-hang-header-body {
+    margin: 10px 0px 10px 40px;
+}
+
+.admin__don-hang-header-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.admin__don-hang-header-name-weight {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
+.admin__don-hang-header-name-no-weight {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4px;
+}
+
+.admin__don-hang-container {
+    margin-top: 30px;
+}
+
+.admin__don-hang-container-headtext {
+    font-size: 2rem;
+    color: var(--hover-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.admin__don-hang-container-soThuTuDonHang {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.admin__don-hang-container-soThuTuDonHang-text {
+    color: var(--black-color);
+}
+
+.admin__don-hang-container-soThuTuDonHang-qtt {
+    color: red;
+    margin-left: 3px;
+}
+
+.admin__don-hang-container-list-heading {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.admin__don-hang-container-item-heading {
+    flex: 1;
+}
+
+.admin__don-hang-container-item-heading-name {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.admin__don-hang-container-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding: 6px 0 3px 0;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+.admin__don-hang-container-item {
+    flex: 1;
+}
+
+.admin__don-hang-container-item-img {
+    height: 70px;
+    margin: 0;
+    border: 1px solid var(--white-color);
+}
+
+.admin__don-hang-container-item-img:hover {
+    border-color: var(--hover-color);
+}
+
+.admin__don-hang-container-item-name {
+    font-size: 1.6rem;
+    color: var(--black-color);
+}
+
+.admin__don-hang-container-item-name.admin__don-hang-container-item-name-hover {
+    color: var(--text-color);
+}
+
+.admin__don-hang-container-item-name.admin__don-hang-container-item-name-hover:hover {
+    color: var(--hover-color);
+}
+
+.admin__don-hang-container-item-trademark {
+    font-size: 1.4rem;
+}
+
+.admin__don-hang-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    margin-bottom: 40px;
+}
+
+.admin__don-hang-footer-btn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: rgb(85, 85, 252);
+    color: var(--white-color);
+    border: 2px solid rgb(85, 85, 252);
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.admin__don-hang-footer-btn:hover {
+    background: var(--white-color);
+    color: rgb(85, 85, 252);
+}
+
+.admin__don-hang-footer-right {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.admin__don-hang-footer-action {
+    color: var(--text-color);
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 4px 8px;
+    border: 1px solid #333;
+    margin-right: 5px;
+    background: #ccc;
+}
+
+#chua-xu-ly-don-hang {
+    background: var(--hover-color);
+    text-decoration: line-through;
+    color: var(--white-color);
+    display: none;
+}
+
+#da-xu-ly-don-hang {
+    background: var(--hover-color);
+    color: var(--white-color);
+    text-decoration: line-through;
+    display: none;
+}
+
+#da-xac-nhan-don-hang {
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: var(--white-color);
+    color: rgb(85, 85, 252);
+    border: 2px solid rgb(85, 85, 252);
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+.admin__don-hang-footer-price {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.admin__don-hang-footer-price-user {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.admin__no-don-hang-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.admin__no-don-hang-text {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+#admin__no-don-hang {
+    margin-bottom: 50px;
+}

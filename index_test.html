@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tại đây bán Mỹ Phẩm</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/login-signup.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/hotro.js"></script>
+    <script src="assets/js/giohang.js"></script>
+    <script src="assets/js/history.js"></script>
+    <script src="assets/js/login_sign.js"></script>
+    <script src="assets/js/one_product.js"></script>
+</head>
+<body>
+        <div class="app__header" >
+            <header class="header">
+                <!-- header top-->
+                <div class="header__top">
+                    <div class="grid header__top1">
+                        <ul class="header__top-list">
+                            <li class="header__top-item header__top-item-action-doc">
+                                <i class="header__top-icon fa-solid fa-phone"></i>
+                                <span class="header__top-help header__top-phone">0772513747</span>
+                                <div class="header__top-item--doc"></div>
+                            </li>
+                            <li class="header__top-item">
+                                <span class="header__top-help">Trợ giúp</span>
+                                <a href="https://www.facebook.com/duythuan28102002" class="header__top-icon-link">
+                                   <i class="header__top-item-help-icon fa-brands fa-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ndt2810/" class="header__top-icon-link">
+                                    <i class="header__top-item-help-icon fa-brands fa-instagram"></i>
+                                 </a>
+                            </li>
+                        </ul>
+                        <ul class="header__top-list" id="header__login-signup">
+                            <li class="header__top-item">
+                                <i class="header__top-icon fa-solid fa-user-group"></i>
+                                <a href="./login.html" class="header__top-log-link">
+                                    <span class="header__top-log-text">Login</span>
+                                </a>
+                            </li>
+                            <li class="header__top-item">
+                                <a href="./signup.html" class="header__top-log-link">
+                                    <span class="header__top-log-text">Sign up</span>
+                                </a>
+                            </li>
+                        </ul>
+                         <ul class="header__top-list header__top-item-user-parent" id="header__top-item-user-parent">
+                            <!-- hiển thị tài khoản người Admin -->
+                        </ul>
+                    </div>
+                </div>
+                 <!-- header bottom-->
+                <div class="header__bottom" id="myHeader">
+                    <div class="grid">
+                        <div class="header__bottom1">
+                            <div class="header__bottom-left">
+                                <div class="header__bottom-logo">
+                                    <a href="./index_test.html" class="header__bottom-logo-link">
+                                        <img src="./assets/img/logo.jpg" alt="" class="header__bottom-logo-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header__bottom-right">
+                                <div class="header__bottom-right-top">
+                                    <div class="header__bottom-search">
+                                        <input id="input-history" oninput="searchTenSanPham()" type="text" class="header__bottom-search-input" maxlength="68" placeholder="Tìm kiếm Sản Phẩm" onclick="onclickShowFind()">
+                                        <button class="header__bottom-search-btn" onclick="findProducts()">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                        <div class="header__bottom-search--error" id="header__bottom-search--error">Phải nhập dữ liệu nhe!</div>
+                                        <div class="header__bottom-search-history" id="find">
+                                            <!-- hiển thị lịch sử tìm kiếm-->
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                    <a href="./gio_hang.html" class="header__bottom-cart" id="header__bottom-cart">
+                                        <i class="header__bottom-cart-icon fa-sharp fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div> 
+                                <div class="header__bottom-menu">
+                                    <ul class="header__bottom-list">
+                                        <li class="header__bottom-item">
+                                            <a href="index_test.html" class="header__bottom-item-link header__bottom-item-link-home">home</a>
+                                        </li>
+                                        <li class="header__bottom-item">
+                                            <a href="#home-product__SALE" class="header__bottom-item-link">cosmetic</a>
+                                        </li>
+                                        <li class="header__bottom-item">
+                                            <a href="#home-product__TRADEMARK" class="header__bottom-item-link">trademark</a>
+                                        </li>
+                                        <li class="header__bottom-item">
+                                            <a href="#shop" class="header__bottom-item-link">shop</a>
+                                        </li>
+                                        <li class="header__bottom-item">
+                                            <a href="#contact" class="header__bottom-item-link">contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </header>
+        </div>
+        <div class="app__container">
+            <div class="grid">
+                <div class="app__container-bgr" id="app__container-bgr">
+                    <img id="app__container-bgr-img" src="bgr1.webp" alt="">
+                    <i class="app__container-bgr-icon-left fa-solid fa-chevron-left" onclick="onClickSliderBackgroundImageLeft()"></i>
+                    <i class="app__container-bgr-icon-right fa-solid fa-chevron-right" onclick="onClickSliderBackgroundImageRight()"></i>
+                    <div class="app__container-bgr-circle">
+                        <ul class="app__container-bgr-circle-list">
+                            <li class="app__container-bgr-circle-item" onclick="showImage1()">
+                                <i class="app__container-bgr-circle-item-icon fa-regular fa-circle"></i>
+                            </li>
+                            <li class="app__container-bgr-circle-item" onclick="showImage2()">
+                                <i class="app__container-bgr-circle-item-icon fa-regular fa-circle"></i>
+                            </li>
+                            <li class="app__container-bgr-circle-item" onclick="showImage3()">
+                                <i class="app__container-bgr-circle-item-icon fa-regular fa-circle"></i>
+                            </li>
+                            <li class="app__container-bgr-circle-item" onclick="showImage4()">
+                                <i class="app__container-bgr-circle-item-icon fa-regular fa-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid__row" id="home-product__SALE">
+                    <div class="grid__column-8">
+                        <div class="home-product">
+                            <!-- SALE -->
+                            <div class="home-product__SALE" >
+                                <div class="home-product-sale" id="no__Find">
+                                    <span class="home-product-text">SALE PRODUCTS</span>
+                                    <div class="home-product-line" ></div>
+                                </div>
+                                <div class="home-product-sale1" id="has__Find" style="display: none">
+                                    <!-- hiển thị kết quả tìm kiếm-->
+                                    
+                                </div>
+                                <div id="SALE">
+                                    <!-- hiển thị list products-->
+                                </div>
+                                <div class="home-product-trademark__goc" id="BtnChuyenPage">
+                                    <!-- hiển thị btn chuyển page -->
+                                </div>
+                            </div>
+                            <!-- TRADEMARK -->
+                            <div class="home-product__TRADEMARK" id="home-product__TRADEMARK">
+                                <div class="home-product-trademark">
+                                    <div class="home-product-line"></div>
+                                    <span class="home-product-text1">TRADEMARK</span>
+                                    <div class="home-product-line"></div>
+                                </div>
+                                    <div class="home-product-trademark__img-list" id="shop">
+                                        <div class="home-product-trademark__img-item" style="background-image: url(./assets/img/th1.jpg);background-size: cover; "></div>
+                                        <div class="home-product-trademark__img-item" style="background-image: url(./assets/img/th2.jpg) ;background-size: cover; "></div>
+                                        <div class="home-product-trademark__img-item" style="background-image: url(./assets/img/th3.jpeg) ;background-size: cover; "></div>
+                                        <div class="home-product-trademark__img-item" style="background-image: url(./assets/img/th4.jpg) ;background-size: cover; "></div>
+                                    </div>
+                            </div>
+                            <!-- góc làm đẹp và sự kiện -->
+                            <div class="home-product__GLDSK" id="home-product__GLDSK">
+                                <div class="home-product-glc-sk" >
+                                    <div class="home-product-line"></div>
+                                    <span class="home-product-text1">Beautify and Events</span>
+                                    <div class="home-product-line"></div>
+                                </div>
+                                <div class="home-product__gld">
+                                    <div class="home-product__gld-left">
+                                        <img src="./assets/img/gld.jpg" alt="" class="home-product__gld-left-img">
+                                    </div>
+                                    <div class="home-product__gld-right">
+                                        <div class="home-product__gld-right-top">
+                                            <a href="" class="home-product__gld-container-link">
+                                                <div class="home-product__gld-container">
+                                                    <img src="./assets/img/sk2.jfif" alt="" class="home-product__gld-container-img">
+                                                    <div class="home-product__gld-container-sk">
+                                                        <span class="home-product__gld-container-name">Sự kiện</span><br>
+                                                        <span class="home-product__gld-container-text">SAIGON BEAUTY SHOW 2023 - Triển lãm Quốc tế về làm đẹp tại TP. Hồ Chí Minh</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="home-product__gld-container-link">
+                                                <div class="home-product__gld-container">
+                                                    <img src="./assets/img/sk2.jfif" alt="" class="home-product__gld-container-img">
+                                                    <div class="home-product__gld-container-sk">
+                                                        <span class="home-product__gld-container-name">Sự kiện</span><br>
+                                                        <span class="home-product__gld-container-text">SAIGON BEAUTY SHOW 2023 - Triển lãm Quốc tế về làm đẹp tại TP. Hồ Chí Minh</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="home-product__gld-right-bottom">
+                                            <a href="" class="home-product__gld-container-link">
+                                                <div class="home-product__gld-container">
+                                                    <img src="./assets/img/gld1.jfif" alt="" class="home-product__gld-container-img">
+                                                    <div class="home-product__gld-container-sk">
+                                                        <span class="home-product__gld-container-name">Góc làm đẹp</span><br>
+                                                        <span class="home-product__gld-container-text">SAIGON BEAUTY SHOW 2023 - Triển lãm Quốc tế về làm đẹp tại TP. Hồ Chí Minh</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="" class="home-product__gld-container-link">
+                                                <div class="home-product__gld-container">
+                                                    <img src="./assets/img/gld2.jfif" alt="" class="home-product__gld-container-img">
+                                                    <div class="home-product__gld-container-sk">
+                                                        <span class="home-product__gld-container-name">Góc làm đẹp</span><br>
+                                                        <span class="home-product__gld-container-text">SAIGON BEAUTY SHOW 2023 - Triển lãm Quốc tế về làm đẹp tại TP. Hồ Chí Minh</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app__footer" id="contact">
+            <div class="grid footer__container">
+                <div class="footer__container-item">
+                    <h2 class="footer__container-name footer__container-name-hover">thông tin liên hệ</h2>
+                    <ul class="footer__list1">
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon footer__item1-icon-map fa-solid fa-location-dot"></i>
+                            <span class="footer__item1-text">273 An Dương Vương, P.3, Q.5, HCM</span>
+                        </li>
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon fa-solid fa-phone"></i>
+                            <span class="footer__item1-text">Hotline: 0772513747</span>
+                        </li>
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon fa-solid fa-phone"></i>
+                            <span class="footer__item1-text">Zalo: 0772513747</span>
+                        </li>
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon fa-solid fa-envelope"></i>
+                            <span class="footer__item1-text">support@nhom11.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__container-item">
+                    <h2 class="footer__container-name">dịch vụ khách hàng</h2>
+                    <ul class="footer__list2">
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Giới thiệu về chúng tôi</a>
+                        </li>
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Chương trình khuyến mãi</a>
+                        </li>
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Câu hỏi thường gặp FAQ</a>
+                        </li>
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Tìm đường đến cửa hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__container-item">
+                    <h2 class="footer__container-name">chính sách - quy định</h2>
+                    <ul class="footer__list2">
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Hướng dẫn mua hàng</a>
+                        </li>
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Cách thức thanh toán</a>
+                        </li>
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Quy định bảo hành</a>
+                        </li>
+                        <li class="footer__item2">
+                            <a href="" class="footer__item2-link">Quy định đổi - trả hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__container-item">
+                    <h2 class="footer__container-name">kết nối với chúng tôi</h2>
+                    <ul class="footer__list1">
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon fa-brands fa-facebook"></i>
+                            <a href="https://www.facebook.com/duythuan28102002" class="footer__item1-link">Facebook</a>
+                        </li>
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon footer__item1-icon-ins fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/ndt2810/" class="footer__item1-link">Instagram</a>
+                        </li>
+                        <li class="footer__item1">
+                            <i class="footer__item1-icon fa-regular fa-hand-point-right"></i>
+                            <span class="footer__item-page">Page Admin</span>
+                            <a href="./login_admin.html" class="footer__item-page-link" >Click Here</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__banquyen">                
+                <span class="footer__banquyen-text">Copyright 2018 © by DUYTHUAN | Your Skincare Friend. All rights reserved.</span>
+            </div>
+        </div>
+
+    <script>
+        
+        var page = new Array();
+        page = [0,8,16,24,32,40,48,56,64,72,80,88,96,104,112,120];
+        
+        // lữu trữ suông local storage 
+        var jsonPage = JSON.stringify(page);
+        localStorage.setItem('page', jsonPage);
+        
+        var danhSachSanPham = JSON.parse(localStorage.getItem('danhSachSanPham'));
+        console.log(danhSachSanPham)
+        var start = 0;
+        var end = 8;
+        hienThiListProducts(start, end);
+        hienThiBtnChuyenPage()
+        /* hiển thị số lượng sản phẩm trong giỏ hàng */
+        hienThiSoLuongSanPhamCuaGioHang();
+        
+        
+
+        var page = JSON.parse(localStorage.getItem('page'));
+
+        var th = 0;
+        /* xử lý chuyển trang */
+        function onclickNextPage() {
+            th++;
+            if(th > ((danhSachSanPham.length / 8) - 1))
+            {
+                th = 0;
+            }
+            hienThiListProducts(page[th], page[th+1]); 
+            console.log(th);
+        }
+
+        function onclickBackPage() {
+            th--;
+            if(th < 0)
+            {
+                th = ((danhSachSanPham.length / 8) - 1);
+            }
+            hienThiListProducts(page[th], page[th+1]);
+        }
+
+        function onclickPage1() {
+            hienThiListProducts(0, 8);
+        }
+
+        function onclickPage2() {
+            hienThiListProducts(8, 16); 
+        }
+
+        function onclickPage3() {
+            hienThiListProducts(16, 24);
+        }
+
+        function onclickPage4() {
+            hienThiListProducts(24, 32);
+        }
+        
+
+        /* chuyển ảnh */
+        var imgs = ["bgr1.webp", "bgr2.png", "bgr4.png", "bgr3.png"];
+        var index = 0;
+        function onClickSliderBackgroundImageLeft() {
+            index--;
+            if(index < 0)
+            {
+                index = imgs.length - 1;
+            }
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+        }
+        function onClickSliderBackgroundImageRight() {
+            index++;
+            if(index >= imgs.length)
+            {
+                index = 0;
+            }
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+        }
+        AutoSliderBackgroundImage = function() {
+            var imgs = ["bgr1.webp", "bgr2.png", "bgr4.png", "bgr3.png"];
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+            index++;
+            if(index == 4)
+            {
+                index = 0;
+            }
+        }
+        setInterval(AutoSliderBackgroundImage,5000);
+
+        function showImage1() {
+            index = 0;
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+        }
+        function showImage2() {
+            index = 1;
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+        }
+        function showImage3() {
+            index = 2;
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+        }
+        function showImage4() {
+            index = imgs.length - 1;
+            document.getElementById('app__container-bgr-img').src = imgs[index];
+        }
+
+        
+
+        /* cố định header */
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+        // Get the header
+        var header = document.getElementById("myHeader");
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+             header.classList.add("sticky");
+        } else {
+             header.classList.remove("sticky");
+            }
+        }
+        
+
+        /* onClickDuaVaoGioHang : function */
+        function onClickDuaVaoGioHang(idSanPham) {
+        var User = JSON.parse(localStorage.getItem('User'));
+
+            if(User.length == 0 )
+            {
+                alert("vui lòng đăng nhập mới thêm vào giỏ hàng!");
+            }
+            else
+            {
+                alert('Đã thêm thành công !');
+                /* bước 1 : phân tích lưu trữ giỏ hàng ntn, lữu trữ trong local storage */
+                /* giỏ hàng là 1 danh sách các đối tượng, item giỏ hàng bao gồm các thông tin
+                    1. sản phẩm là gì -> sử dụng id của sản phẩm đẻ lưu trữ
+                    2. số lượng bao nhiêu
+                */
+
+                /* bước 2 : xây dựng hàm tạo nhanh đối tượng item giỏ hàng */
+
+                /* bước 3 : lấy danh sách giỏ hàng có trong localstorage lên */
+                var danhSachItemGioHang = layDanhSachItemGioHang();
+                var coTonTaiTrongDanhSachItemGioHang = false;
+                for(var i = 0; i < danhSachItemGioHang.length; i++)
+                {
+                    var itemGioHangHienTai = danhSachItemGioHang[i];
+                    // nếu tồn tại thì tăng số lượng lên
+                    /* bước 4 : nếu sản phẩm đã tồn tại trong giỏ hàm thì tăng số lượng lên*/
+                    if(itemGioHangHienTai.idSanPham == idSanPham)
+                    {
+                        danhSachItemGioHang[i].soLuong ++;
+                        coTonTaiTrongDanhSachItemGioHang = true;
+                    }
+                }
+
+                // nếu không tồn tại -> tạo ra đối tượng và thêm vào itemGioHang
+                /* bước 5 : nếu sản phẩm chưa tồn tại trong giỏ hàng thì thêm mới một item giỏ hàng,
+                            có số lượng sản phẩm mặc định bằng 1
+                */
+                if(coTonTaiTrongDanhSachItemGioHang == false)
+                {
+                    var itemGioHang = TaoDoiTuongItemGioHang(idSanPham, 1);
+                    danhSachItemGioHang.push(itemGioHang);
+                }
+                /* bước 6: lưu trữ lại local storage */
+                luuDanhSachItemGioHangVaoLocalStorage(danhSachItemGioHang); 
+                //hiển thị số lượng
+                hienThiSoLuongSanPhamCuaGioHang();
+            }            
+        }
+        /* hiển thị tài khoản user */
+        hienThiNameUser();
+        xuLyLogSigAndUser();
+    </script>
+</body>
+</html>

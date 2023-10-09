@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/login-signup.css">
+    <link rel="stylesheet" href="./assets/css/signup.css">
+    <link rel="stylesheet" href="./assets/css/action.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.2.0-web/css/all.min.css">
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/hotro.js"></script>
+    <script src="assets/js/giohang.js"></script>
+    <script src="assets/js/login_sign.js"></script>
+<style>
+    li label {
+        display: block;
+    }
+    .error {
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+    height: 12px;
+    margin-top: 5px;
+}
+</style>
+
+</head>
+<body>
+    <div class="app__header" >
+        <header class="header">
+            <!-- header top-->
+            <div class="header__top">
+                <div class="grid header__top1">
+                    <ul class="header__top-list">
+                        <li class="header__top-item header__top-item-action-doc">
+                            <i class="header__top-icon fa-solid fa-phone"></i>
+                            <span class="header__top-help header__top-phone">0772513747</span>
+                            <div class="header__top-item--doc"></div>
+                        </li>
+                        <li class="header__top-item">
+                            <span class="header__top-help">Trợ giúp</span>
+                            <a href="https://www.facebook.com/duythuan28102002" class="header__top-icon-link">
+                               <i class="header__top-item-help-icon fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ndt2810/" class="header__top-icon-link">
+                                <i class="header__top-item-help-icon fa-brands fa-instagram"></i>
+                             </a>
+                        </li>
+                    </ul>
+                    <ul class="header__top-list" id="header__login-signup">
+                        <li class="header__top-item">
+                            <i class="header__top-icon fa-solid fa-user-group"></i>
+                            <a href="./login.html" class="header__top-log-link">
+                                <span class="header__top-log-text">Login</span>
+                            </a>
+                        </li>
+                        <li class="header__top-item">
+                            <a href="./signup.html" class="header__top-log-link">
+                                <span class="header__top-log-text">Sign up</span>
+                            </a>
+                        </li>
+                    </ul>
+                     <ul class="header__top-list header__top-item-user-parent" id="header__top-item-user-parent">
+                        <!-- hiển thị tài khoản người Admin -->
+                    </ul>
+                </div>
+            </div>
+             <!-- header bottom-->
+            <div class="header__bottom" id="myHeader">
+                <div class="grid">
+                    <div class="header__bottom1">
+                        <div class="header__bottom-left">
+                            <div class="header__bottom-logo">
+                                <a href="./index_test.html" class="header__bottom-logo-link">
+                                    <img src="./assets/img/logo.jpg" alt="" class="header__bottom-logo-img">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__bottom-right">
+                            <div class="header__bottom-right-top">
+                                <div class="header__bottom-search">
+                                    <input id="input-history" oninput="searchTenSanPham()" type="text" class="header__bottom-search-input" maxlength="68" placeholder="Tìm kiếm Sản Phẩm" onclick="onclickShowFind()">
+                                    <button class="header__bottom-search-btn" onclick="findProducts()">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <div class="header__bottom-search--error" id="header__bottom-search--error">Phải nhập dữ liệu nhe!</div>
+                                    <div class="header__bottom-search-history" id="find">
+                                        <!-- hiển thị lịch sử tìm kiếm-->
+                                    </div>
+                                </div>
+                                <a href="" class="header__bottom-cart" id="header__bottom-cart">
+                                    <i class="header__bottom-cart-icon fa-sharp fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </div> 
+                            <div class="header__bottom-menu">
+                                <ul class="header__bottom-list">
+                                    <li class="header__bottom-item">
+                                        <a href="index_test.html" class="header__bottom-item-link header__bottom-item-link-home">home</a>
+                                    </li>
+                                    <li class="header__bottom-item">
+                                        <a href="" class="header__bottom-item-link">cosmetic</a>
+                                    </li>
+                                    <li class="header__bottom-item">
+                                        <a href="" class="header__bottom-item-link">trademark</a>
+                                    </li>
+                                    <li class="header__bottom-item">
+                                        <a href="" class="header__bottom-item-link">shop</a>
+                                    </li>
+                                    <li class="header__bottom-item">
+                                        <a href="" class="header__bottom-item-link">contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </header>
+    </div>
+    <div class="app__container">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-8">
+                    <div class="home-product">
+                        <div action="" id="app__SIGNUP">
+                            <div class="app__login">
+                                <div class="app__login-overlay"></div>
+                                <div class="login__body">
+                                    <div class="login__container">
+                                        <div class="login__container-left">
+                                            <div class="login__container-left-body">
+                                                <ul class="login__list">
+                                                    <li class="login__item">
+                                                        <span class="login__container-left-text">Đăng ký trở thành thành viên để nhận ưu đãi cực lớn</span>
+                                                    </li>
+                                                    <li class="login__item login__item-img-gift">
+                                                        <img src="./assets/img/gift.png" alt="" class="login__container-left-img">
+                                                    </li>
+                                                    <div class="login__item-container-fb-gg">
+                                                        <li class="login__item login__item-fb">
+                                                            <a href="" class="login__item-fb-link">
+                                                                <i class="login__item-fb-icon fa-brands fa-facebook"></i>
+                                                                <span class="login__item-fb-text">Đăng nhập với facebook</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="login__item login__item-gg">
+                                                            <a href="" class="login__item-gg-link">
+                                                                <i class="login__item-gg-icon fa-brands fa-google-plus-g"></i>
+                                                                <span class="login__item-fb-text">Đăng nhập với google</span>
+                                                            </a>
+                                                        </li>
+                                                    </div>
+                                                    <li class="login__item login__item-last">
+                                                        <span class="login__container-left-text--last">Bạn chưa có tài khoản?</span>
+                                                        <a href="./login.html" class="login__container-left-text-link login__container-left-text-link-last">Đăng nhập</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="login__container-right">
+                                            <div class="login__container-right-body">
+                                                <div class="signup__container-right-body-body">
+                                                    <ul class="login__list1">
+                                                        <li class="login__item1">
+                                                            <input khongDeTrong noiDungLoiDeTrong = 'Email không được để trống' id="email" type="text" class="login__item1-input" placeholder="Email">
+                                                            <label for="email" class="error error__login"></label>
+                                                        </li>
+                                                        <li class="login__item1">
+                                                            <input khongDeTrong noiDungLoiDeTrong = 'Họ tên không được để trống' id="hoTen" type="text" class="login__item1-input" placeholder="Họ tên">
+                                                            <label for="hoTen" class="error error__login"></label>
+                                                        </li>
+                                                        <li class="login__item1">
+                                                            <input khongDeTrong noiDungLoiDeTrong = 'Mật khẩu không được để trống' id="matKhau" type="password" class="login__item1-input" placeholder="Mật khẩu">
+                                                            <label for="matKhau" class="error error__login"></label>
+                                                        </li>
+                                                        <li class="login__item1">
+                                                            <input khongDeTrong noiDungLoiDeTrong = 'Xác nhận mật khẩu không được để trống' id="xacNhanMatKhau" type="password" class="login__item1-input" placeholder="Xác nhận mật khẩu">
+                                                            <label for="xacNhanMatKhau" class="error error__login"></label>
+                                                        </li>
+                                                        <li class="login__item1">
+                                                            <input khongDeTrong noiDungLoiDeTrong = 'Ngày sinh không được để trống' id="ngaySinh" type="number" class="login__item1-input" placeholder="Ngày sinh (DD/MM/YYYY)">
+                                                            <label for="ngaySinh" class="error error__login"></label>
+                                                        </li>
+                                                        <li class="login__item1">
+                                                            <input khongDeTrong noiDungLoiDeTrong = 'Số điện thoại không được để trống' id="dienThoai" type="text" class="login__item1-input" placeholder="Điện thoại">
+                                                            <label for="dienThoai" class="error error__login"></label>
+                                                        </li>
+                                                        <li class="login__item1">
+                                                            <button class="login__item1-btn" onclick="onClickFormValidateSignUp()">Đăng ký</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app__footer" id="contact">
+        <div class="grid footer__container">
+            <div class="footer__container-item">
+                <h2 class="footer__container-name footer__container-name-hover">thông tin liên hệ</h2>
+                <ul class="footer__list1">
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon footer__item1-icon-map fa-solid fa-location-dot"></i>
+                        <span class="footer__item1-text">273 An Dương Vương, P.3, Q.5, HCM</span>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-solid fa-phone"></i>
+                        <span class="footer__item1-text">Hotline: 0772513747</span>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-solid fa-phone"></i>
+                        <span class="footer__item1-text">Zalo: 0772513747</span>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-solid fa-envelope"></i>
+                        <span class="footer__item1-text">support@nhom11.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container-item">
+                <h2 class="footer__container-name">dịch vụ khách hàng</h2>
+                <ul class="footer__list2">
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Giới thiệu về chúng tôi</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Chương trình khuyến mãi</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Câu hỏi thường gặp FAQ</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Tìm đường đến cửa hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container-item">
+                <h2 class="footer__container-name">chính sách - quy định</h2>
+                <ul class="footer__list2">
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Hướng dẫn mua hàng</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Cách thức thanh toán</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Quy định bảo hành</a>
+                    </li>
+                    <li class="footer__item2">
+                        <a href="" class="footer__item2-link">Quy định đổi - trả hàng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container-item">
+                <h2 class="footer__container-name">kết nối với chúng tôi</h2>
+                <ul class="footer__list1">
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon fa-brands fa-facebook"></i>
+                        <a href="https://www.facebook.com/duythuan28102002" class="footer__item1-link">Facebook</a>
+                    </li>
+                    <li class="footer__item1">
+                        <i class="footer__item1-icon footer__item1-icon-ins fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/ndt2810/" class="footer__item1-link">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__banquyen">                
+            <span class="footer__banquyen-text">Copyright 2018 © by DUYTHUAN | Your Skincare Friend. All rights reserved.</span>
+        </div>
+    </div>
+
+    
+    <script>
+
+
+        // cố định thanh header
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the header
+        var header = document.getElementById("myHeader");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+         header.classList.add("sticky");
+        } else {
+         header.classList.remove("sticky");
+        }
+        }
+    </script>
+</body>
+</html>
